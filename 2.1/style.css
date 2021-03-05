@@ -24,6 +24,12 @@ header h1{
     font-family: myFont;
 }
 
+#description{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+
 #author{
     text-align: left;
     right: 10px;
@@ -36,11 +42,19 @@ header h1{
 
 body{
     font-family: myFont;
-    font-size: 120%;
+    font-size: 130%;
     background-color:black;
     color: white;
     
 }
+
+main{
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 60%;
+    border-style: solid;
+}
+
 
 #links a{
     position: relative;
@@ -72,8 +86,9 @@ body{
 
 
 aside{
-    position: relative;
-    left: 60px;
+    width: 30%;
+    float: right;
+    border-style: solid;
 }
 
 
