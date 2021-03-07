@@ -5,14 +5,13 @@
 }
 
 header{
-    background-color :#ec6b01;
+    background-color :#7a7a52;
     text-align: left;
     position: sticky;
     top: 0px;
     height: 200px;
     width: 95%;
     left :2.5%;
-    
 }
 
 header h1{
@@ -35,39 +34,40 @@ header h1{
     right: 2px;
     font-family: myFont;
     color:white;
-    background-color: black;
+
 }
 
 body{
     font-family: myFont;
     font-size: 130%;
-    background-color:black;
+    background: linear-gradient(to right top, #000000, #0d0d0d);
     color: white;
-    
+  
 }
 
 main{
-    padding-left: 50px;
-    padding-right: 50px;
-    width: 60%;
-    border-style: solid;
+    top: 30px;
+    text-align: center;
+
+    border: 5px solid white;
 }
 
 
 #links a{
     position: relative;
     left: 30px;
-    background-color:red;
+    background-color:#808080;
     color: white;
     padding: 0.5em 1em;
     text-decoration: none;
     text-transform: uppercase;
     font-family: myFont;
     font-size: 30px;
+    border: 2px solid orange;
 }
 
 #links a:hover{
-    background-color: orange;
+    background-color: #ec6b01;
 }
 
 #links a:active{
@@ -75,11 +75,16 @@ main{
 }
 
 #maillink{
-    background-color: #ec6b01;
+    background-color:#808080;
+    border: 2px solid orange;
     color: white;
     font-size: 30px;
     padding: 5px 10px;
     text-decoration: none;
+}
+
+#maillink:hover{
+    background-color: #ec6b01;
 }
 
 #contactinfo{
