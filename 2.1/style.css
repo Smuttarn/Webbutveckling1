@@ -29,12 +29,10 @@ header h1{
     padding-bottom: 20px;
 }
 
-
 #author{
-    text-align: left;
-    right: 10px;
     position: absolute;
-    
+    bottom: 185px;
+    right: 2px;
     font-family: myFont;
     color:white;
     background-color: black;
@@ -84,11 +82,19 @@ main{
     text-decoration: none;
 }
 
+#contactinfo{
+    position: fixed;
+    background-color: black;
+    text-align: center;
+    height: 170px;
+    width: 200px;
+    right: 10px;
+    bottom: 25px;
+}
+
 
 aside{
-    width: 30%;
-    float: right;
-    border-style: solid;
+
 }
 
 
