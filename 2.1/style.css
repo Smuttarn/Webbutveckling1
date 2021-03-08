@@ -12,6 +12,7 @@ header{
     height: 200px;
     width: 95%;
     left :2.5%;
+    
 }
 
 header h1{
@@ -24,7 +25,7 @@ header h1{
 }
 
 #description{
-    padding-top: 50px;
+    
     padding-bottom: 20px;
 }
 
@@ -46,19 +47,37 @@ body{
 }
 
 main{
+    padding: 20px;
+    margin: auto;
     top: 30px;
     text-align: center;
-
+    width: 80%;
     border: 5px solid white;
 }
 
+#listofthings{
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+    width: 80%;
+}
+
+article{
+    border: 2px solid white;
+    padding: 30px;
+}
+
+form{
+    padding: 30px;
+}
 
 #links a{
     position: relative;
     left: 30px;
     background-color:#808080;
     color: white;
-    padding: 0.5em 1em;
+    padding: 0.3em 0.8em;
+    bottom: 40px;
     text-decoration: none;
     text-transform: uppercase;
     font-family: myFont;
@@ -95,6 +114,14 @@ main{
     width: 200px;
     right: 10px;
     bottom: 25px;
+}
+
+#musicplayer{
+    position: fixed;
+    bottom: 235px;
+    right: 20px;
+    width: 220px;
+    border-radius: 90px;
 }
 
 
