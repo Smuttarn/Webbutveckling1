@@ -25,7 +25,6 @@ header h1{
 }
 
 #description{
-    
     padding-bottom: 20px;
 }
 
@@ -83,6 +82,10 @@ form{
     font-family: myFont;
     font-size: 30px;
     border: 2px solid orange;
+    -webkit-transition:all 0.25s linear;
+    -moz-transition:all 0.25s linear;
+    -o-transition:all 0.25s linear;
+    transition:all 0.25s linear;
 }
 
 #links a:hover{
@@ -100,6 +103,10 @@ form{
     font-size: 30px;
     padding: 5px 10px;
     text-decoration: none;
+    -webkit-transition:all 0.25s linear;
+    -moz-transition:all 0.25s linear;
+    -o-transition:all 0.25s linear;
+    transition:all 0.25s linear;
 }
 
 #maillink:hover{
@@ -120,13 +127,38 @@ form{
     position: fixed;
     bottom: 235px;
     right: 20px;
-    width: 220px;
+    width: 250px;
     border-radius: 90px;
+    -webkit-transition:all 0.4s linear;
+    -moz-transition:all 0.4s linear;
+    -o-transition:all 0.4s linear;
+    transition:all 0.4s linear;
 }
 
+#musicplayer:hover, #musicplayer:focus {
+    filter: drop-shadow(2px 3px 3px #333);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+}
 
 aside{
 
+}
+
+#meonrock{
+   
+    width: 35%;
+    border: solid white;
+    
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+figcaption{
+    text-align: center;
+    font-size: 35px;
+    padding-top: 10px;
 }
 
 
