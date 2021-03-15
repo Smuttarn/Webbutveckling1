@@ -1,6 +1,10 @@
 var array = ["1", "2", "3", "4", "5"];
 var arrayBool = false;
 var value = Math.PI;
+var newWindow;
+var hasClicked = false;
+
+
 //Button functions
 document.getElementById("arrayButton").onclick = function() {showArray()};
 document.getElementById("boolButton").onclick = function() {changeBool()};
@@ -12,6 +16,10 @@ document.getElementById("showGlobal").onclick = function() {showGlobal()};
 document.getElementById("mathStuff").onchange = function() {multiplyPi()};
 document.getElementById("switchWords").onkeyup = function() {updateWords()};
 document.getElementById("switchWords").onchange = function() {switchWords()};
+
+document.getElementById("windowStuff").onclick = function() {windowInfo()};
+
+document.getElementById("newWindow").onclick = function() {openWindow()};
 
 
 window.onload = function() {
@@ -69,13 +77,29 @@ function updateWords(){
 }
 
 function switchWords(){
-
     var replace = /(\w+)\s(\w+)/;
-    
     var txt = document.getElementById("switchWords").value;
     var newText = txt.replace(replace, '$2 $1');
+    document.getElementById("switchOutput").innerHTML = "Output: \"" + newText +"\"";   
+}
 
-    document.getElementById("switchOutput").innerHTML = "Output: \"" + newText +"\"";
-    
+function windowInfo(){
+    alert("This is meant to test the window functions!");
+    var answer = confirm("Would you like to continue?");
+    if(!answer){
+        return;
+    }
+    document.getElementById("windowOutput").innerHTML = prompt("Type in your name: ", "Your Name");
+}
+
+function openWindow(){
+    if(!hasClicked){
+        newWindow = window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+        hasClicked = true;
+    }
+    else{
+        newWindow.close();
+        hasClicked = false;
+    }
     
 }
