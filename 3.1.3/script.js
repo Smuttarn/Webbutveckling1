@@ -4,7 +4,10 @@ var value = Math.PI;
 var newWindow;
 var windowHasClicked = false;
 var counterHasClicked = false;
+var timerTemp;
 var counterTemp;
+
+var square = document.querySelector("#mouseEventImg");
 
 
 //Button functions
@@ -24,6 +27,14 @@ document.getElementById("windowStuff").onclick = function() {windowInfo()};
 document.getElementById("newWindow").onclick = function() {openWindow()};
 document.getElementById("timer").onclick = function() {setTimer(3000)};
 document.getElementById("counter").onclick = function() {counter()};
+
+//Mouse functions
+document.getElementById("mouseEventImg").onmouseover = function(){mouseOver()};
+document.getElementById("mouseEventImg").onmouseout = function(){mouseOut()};
+
+square.addEventListener("mousemove", updateCoordinates, false);
+square.addEventListener("mouseenter", updateCoordinates, false);
+square.addEventListener("mouseleave", updateCoordinates, false);
 
 window.onload = function() {
 
@@ -110,14 +121,14 @@ function displayBoom(){
     document.getElementById("timerOutput").innerHTML = "BOOM!"
 }
 
-function setTimer(seconds){
-    var sec = seconds / 1000;
+function setTimer(milliseconds){
+    var sec = milliseconds / 1000;
 
-    var temp = setInterval(function(){
+    timerTemp = setInterval(function(){
             document.getElementById("timerOutput").innerHTML = sec;
             if(sec == 0){
                 displayBoom();
-                clearInterval(temp);
+                clearInterval(timerTemp);
             }
             sec--;
         },1000);
@@ -141,5 +152,15 @@ function counter(){
 }
 
 
-    
+function mouseOver(){
+    document.getElementById("mouseEventImg").style.background = "red";
+}
+
+function mouseOut(){
+    document.getElementById("mouseEventImg").style.background = "";
+}
+
+function updateCoordinates(event){
+    document.getElementById("mousePosition").innerHTML = "x = " + event.pageX + ", y = " + event.pageY;
+}
 
