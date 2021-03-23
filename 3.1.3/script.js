@@ -8,6 +8,7 @@ var timerTemp;
 var counterTemp;
 
 var square = document.querySelector("#mouseEventImg");
+var switchWordsBox = document.getElementById("switchWords");
 
 
 //Button functions
@@ -35,6 +36,8 @@ document.getElementById("mouseEventImg").onmouseout = function(){mouseOut()};
 square.addEventListener("mousemove", updateCoordinates, false);
 square.addEventListener("mouseenter", updateCoordinates, false);
 square.addEventListener("mouseleave", updateCoordinates, false);
+
+switchWordsBox.addEventListener("keypress", switchWords, false);
 
 window.onload = function() {
 
@@ -90,10 +93,48 @@ function updateWords(){
 }
 
 function switchWords(){
-    var replace = /(\w+)\s(\w+)/;
     var txt = document.getElementById("switchWords").value;
+    var counter = 0;
+
+    for(var i = 0; i < txt.length();i++){
+        if(txt.indexOf(' ') == 2){
+            counter++;
+            if(counter > 1){
+                event.preventDefault();
+            }
+        }
+    }
+
+
+
+    var replace = /(\w+)\s(\w+)/;
+    
     var newText = txt.replace(replace, '$2 $1');
     document.getElementById("switchOutput").innerHTML = "Output: \"" + newText +"\"";   
+}
+
+function checkSpace(event){
+    var txt = document.getElementById("switchWords").value;
+    var counter = 0;
+    event.preventDefault();
+    for(var i = 0; i < txt.length();i++){
+        if(txt.charAt(i) == " "){
+            counter++;
+        }
+    }
+
+    if(counter > 1){
+        event.preventDefault();
+        var charCode = event.charCode;
+        if(charCode == 32){
+            event.preventDefault();
+
+        }
+    }
+    
+
+
+    event.preventDefault();
 }
 
 function windowInfo(){
