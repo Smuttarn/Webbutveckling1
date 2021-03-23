@@ -35,7 +35,7 @@ document.getElementById("mouseEventImg").onmouseout = function(){mouseOut()};
 
 square.addEventListener("mousemove", updateCoordinates, false);
 square.addEventListener("mouseenter", updateCoordinates, false);
-square.addEventListener("mouseleave", updateCoordinates, false);
+square.addEventListener("mouseleave", clearCoordinates, false);
 
 switchWordsBox.addEventListener("keypress", switchWords, false);
 
@@ -176,6 +176,10 @@ function mouseOut(){
 }
 
 function updateCoordinates(event){
-    document.getElementById("mousePosition").innerHTML = "x = " + event.pageX + ", y = " + event.pageY;
+    var bounds = document.getElementById("mouseEventImg").getBoundingClientRect();
+    document.getElementById("mousePosition").innerHTML = "x = " + (event.pageX - bounds.left) + ", y = " + (event.pageY - bounds.top);
 }
 
+function clearCoordinates(){
+    document.getElementById("mousePosition").innerHTML = "";
+}
