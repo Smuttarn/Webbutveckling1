@@ -45,12 +45,39 @@ document.getElementById("rolloverImage").onmouseout = function(){changeImage("sl
 window.onload = function() {
     preloadImage("slap.gif");
     preloadImage("slapFixed.jpg");
+    $("#fadeImage").hide();
 };
 
 function preloadImage(url){
     var img = new Image();
     img.src = url;
 }
+
+$("#fadeButton").click(function(){
+    $("#fadeImage").fadeOut(400);
+    $("#fadeImage").fadeIn(400);
+});
+
+$("#toggleButton").click(function(){
+    $("#fadeImage").toggle();
+});
+
+$("#showButton").click(function(){
+    $("#fadeImage").show();
+});
+
+$("#hideButton").click(function(){
+    $("#fadeImage").hide();
+});
+
+$("#fadeToggleButton").click(function(){
+    $("#fadeImage").fadeToggle();
+});
+
+$("#fadeToButton").click(function(){
+    $("#fadeImage").fadeTo(2000, 0.5);
+});
+
 
 //this now works, finally!
 function showArray(){
