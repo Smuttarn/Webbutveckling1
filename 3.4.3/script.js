@@ -45,8 +45,14 @@ document.getElementById("rolloverImage").onmouseout = function(){changeImage("sl
 window.onload = function() {
     preloadImage("slap.gif");
     preloadImage("slapFixed.jpg");
-    $("#fadeImage").hide();
+
+    //Retrieves the IP-adress of the last visitor
+
 };
+
+function getIP(){
+
+}
 
 function preloadImage(url){
     var img = new Image();
@@ -95,6 +101,13 @@ $("#narrowButton").click(function(){
         document.getElementById("fadeImage").style.background = "orange";
     });
 });
+
+
+$("#getIPButton").click(function(){
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+        $("#outputIP").html(data.ip);
+        });
+})
 
 //this now works, finally!
 function showArray(){
@@ -230,11 +243,11 @@ function mouseOut(){
 
 function updateCoordinates(event){
     var bounds = document.getElementById("mouseEventImg").getBoundingClientRect();
-    document.getElementById("mousePosition").innerHTML = "x = " + (event.pageX - bounds.left) + ", y = " + (event.pageY - bounds.top);
+    document.getElementById("mousePosition").innerHTML = "Coordinates: X = " + Math.floor((event.pageX - bounds.left)) + ", Y = " + (event.pageY - bounds.top);
 }
 
 function clearCoordinates(){
-    document.getElementById("mousePosition").innerHTML = "";
+    document.getElementById("mousePosition").innerHTML = "Coordinates: ";
 }
 
 
