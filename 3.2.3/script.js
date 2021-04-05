@@ -142,6 +142,12 @@ $("#sumButton").click(function(){
     }
 })
 
+
+$("#drawLineButton").click(function(){
+    var context = $("#drawImage").getContext("2d");
+    
+})
+
 //this now works, finally!
 function showArray(){
     var array = ["1", "2", "3", "4", "5"];

@@ -1,0 +1,53 @@
+#buttonshit{
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    font-size: 50px;
+}
+
+#mathStuff{
+    
+}
+
+p{
+    font-size: 25px;
+}
+
+#switchWords{
+    width: 350px;
+}
+
+#mouseEventImg{
+    width: 300px;
+    height: 300px;
+    border: 5px solid black;
+}
+
+#rolloverImage{
+    width: 500px;
+    height: 300px;
+}
+
+#fadeImage{
+    width: 300px;
+    height: 300px;
+    background-color: orange;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+#drawImage{
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+}
+
+body{
+    position: relative;
+    left: 20%;
+}
+
+button{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
