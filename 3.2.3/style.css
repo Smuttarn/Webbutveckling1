@@ -1,13 +1,3 @@
-#buttonshit{
-    width: 250px;
-    height: 150px;
-    text-align: center;
-    font-size: 50px;
-}
-
-#mathStuff{
-    
-}
 
 p{
     font-size: 25px;
@@ -31,23 +21,59 @@ p{
 #fadeImage{
     width: 300px;
     height: 300px;
-    background-color: orange;
+    background-color: blue;
     border-radius: 50%;
     border: 5px solid black;
 }
 
-#drawImage{
-    width: 500px;
-    height: 500px;
-    border: 5px solid black;
-}
-
 body{
-    position: relative;
-    left: 20%;
+    width: 50%;
+    margin: 0 auto;
 }
 
 button{
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+#drawingSection{
+    background-color: gainsboro;
+    width: 1000px;
+    height: 800px;
+}
+
+h2{
+    position: relative;
+    text-align: center;
+    top: 50px;
+}
+
+#drawCanvas{
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+    background-color: white;
+    position: relative;
+    left: 250px;
+    top: 50px;
+}
+
+#drawingButtons{
+    background-color: aliceblue;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 80px;
+    left: 250px;
+    border: 5px solid orange;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.drawButton{
+    padding: 0.7em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
 }

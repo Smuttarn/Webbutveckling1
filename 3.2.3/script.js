@@ -8,6 +8,9 @@ var timerTemp;
 var counterTemp;
 var exampleUrl;
 
+var drawingCanvas = document.getElementById("drawCanvas");
+var drawingContext = drawingCanvas.getContext("2d");
+
 var square = document.querySelector("#mouseEventImg");
 var switchWordsBox = document.getElementById("switchWords");
 
@@ -144,11 +147,67 @@ $("#sumButton").click(function(){
 
 
 $("#drawLineButton").click(function(){
-    var context = $("#drawImage").getContext("2d");
-    
+    var x = Math.random() * drawingContext.canvas.width;
+    var y = Math.random() * drawingContext.canvas.height;
+    var posX = Math.random() * drawingContext.canvas.width;
+    var posY = Math.random() * drawingContext.canvas.height;
+    drawingContext.beginPath();
+    drawingContext.moveTo(posX,posY);
+    drawingContext.lineTo(x,y);
+    drawingContext.stroke();
 })
 
-//this now works, finally!
+$("#drawBeizerButton").click(function(){
+    var x = Math.random() * drawingContext.canvas.width;
+    var y = Math.random() * drawingContext.canvas.height;
+    var posX = Math.random() * drawingContext.canvas.width;
+    var posY = Math.random() * drawingContext.canvas.height;
+    drawingContext.beginPath();
+    drawingContext.moveTo(posX,posY);
+    drawingContext.bezierCurveTo(posX, y, x, y, x, posY);
+    drawingContext.stroke();
+})
+
+$("#drawTextButton").click(function(){
+    var text = $("#canvasText");
+
+    if(!text.val()){
+        text.attr("placeholder", "Type something!");
+        return;
+    }
+
+    output = text.val();
+
+    var randomFontSize = Math.floor(Math.random() * (50 - 10) + 10);
+    var posX = Math.random() * drawingContext.canvas.width;
+    var posY = Math.random() * drawingContext.canvas.height;
+
+    drawingContext.shadowOffsetX = 0;
+    drawingContext.shadowOffsetY = 0;
+    drawingContext.shadowColor = "rgba(0,0,0,0)";
+
+    if(document.getElementById("shadowCheck").checked){
+        drawingContext.shadowOffsetX = 3;
+        drawingContext.shadowOffsetY = 3;
+        drawingContext.shadowColor = "rgba(0,0,0,0.3)";
+    }
+    else if(document.getElementById("transCheck").checked){
+        alert("Hejsan!");
+    }
+
+
+    
+    drawingContext.font = randomFontSize + "px Arial";
+    drawingContext.fillText(text.val(), posX, posY);
+})
+
+
+$("#clearCanvasButton").click(clearCanvas);
+
+function clearCanvas(){
+    drawingContext.clearRect(0,0, drawingContext.canvas.width, drawingContext.canvas.height);
+}
+
 function showArray(){
     var array = ["1", "2", "3", "4", "5"];
     document.getElementById("testarray").innerHTML = array.toString();

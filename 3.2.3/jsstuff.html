@@ -63,15 +63,23 @@
 <button id = "sumButton" >Summarize</button>
 <p id = "outputSum">...</p>
 
-
-<section id = "drawImage"></section>
-<button id = "drawLineButton">Draw random line</button>
-<button id = "drawBezierButton">Draw Bézier</button>
-<button id = "transShadowButton">Draw random line</button>
-<button id = "drawLineButton">Draw random line</button>
-<button id = "drawLineButton">Draw random line</button><br>
-<button id = "drawTextButton">Draw text</button>
-<input type="text" placeholder = "Type text to draw...">
+<section id = "drawingSection">
+    <h2>Randomized Art</h2>
+<canvas id = "drawCanvas"></canvas><br>
+<section id = "drawingButtons">
+<button class = "drawButton" id = "drawLineButton">Draw random line</button>
+<button class = "drawButton" id = "drawBeizerButton">Draw random Bézier</button>
+<button class = "drawButton">Add image</button>
+<button class = "drawButton">Save image</button>
+<button class = "drawButton" id = "drawTextButton">Draw text</button>
+<input class = "drawButton" type="checkbox" name = "transparentCheck" id = "transCheck">
+<label for="transparentCheck">Transparent Text</label>
+<input class = "drawButton" type="checkbox" name = "shadowCheck" id = "shadowCheck">
+<label for="shadowCheck">Shadowy Text</label>
+<input class = "drawButton" type="text" placeholder = "Type text to draw..." id = "canvasText">
+<button class = "drawButton" id = "clearCanvasButton">Clear canvas</button>
+</section>
+</section>
 
 
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
