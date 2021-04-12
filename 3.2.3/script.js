@@ -168,6 +168,19 @@ $("#drawBeizerButton").click(function(){
     drawingContext.stroke();
 })
 
+$("#canvasText").ready(function(){
+    $("#drawTextButton").attr("disabled", true);
+})
+
+$("#canvasText").onkeyup(function(){
+    if(!$(this).val()){
+        $("#drawTextButton").attr("disabled", true);
+    }
+    else{
+        $("#drawTextButton").attr("disabled", false);
+    }
+})
+
 $("#drawTextButton").click(function(){
     var text = $("#canvasText");
 
