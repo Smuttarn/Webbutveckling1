@@ -7,43 +7,74 @@
 </head>
 <body>
 
+<section class = "elementContainer">
 <button id="arrayButton">Show Array</button>
 <p id="testarray"></p>
+</section>
 
+<section class = "elementContainer">
 <button id="boolButton" >Switch what is true and what is false</button>
 <p id="thetruth"></p>
+</section>
 
+
+<section class = "elementContainer">
 <button id="dateButton" >Display the current date</button> <button id="dateNumberButton" >Display number of milliseconds since midnight January 1, 1970</button>
-<p id="thedate"></p>
+<p id="thedate"></p>     
+</section>
 
+<section class = "elementContainer">
 <input type="text" id ="mathStuff" placeholder="Multiply PI"></input> 
 <p id="mathOutput">π</p>
+</section>
 
+
+<section class = "elementContainer">
 <button id ="showGlobal">Show global object for the browser</button> 
-<p id="globalOutput"></p>
+<p id="globalOutput"></p>    
+</section>
 
+
+<section class = "elementContainer">
 <input type="text" id ="switchWords" placeholder="Type two words, separated by space, then press Enter"></input> 
 <p id="typingOutput"></p>
 <p id="switchOutput"></p>
+</section>
 
+
+<section class = "elementContainer">
 <button id ="windowStuff">Test Window-object</button>
-<p id = "windowOutput"></p>
+<p id = "windowOutput"></p>   
+</section>
 
+
+<section class = "elementContainer">
 <button id ="newWindow">Link to my nudes</button> <br><br>
+</section>
 
+
+<section class = "elementContainer">
 <button id ="timer">Start timer</button>
 <p id = "timerOutput"></p>
+</section>
 
+
+<section class = "elementContainer">
 <button id ="counter">Start/Stop Counter</button>
-<p id = "counterOutput"></p>
+<p id = "counterOutput"></p>    
+</section>
 
+
+<section class = "elementContainer">
 <section id = "mouseEventImg"></section>
-
 <p id = "mousePosition">Coordinates: </p>
+</section>
 
+<section class = "elementContainer">
 <img src="slapFixed.jpg" id = "rolloverImage">
+</section>
 
-<br>
+<section class = "elementContainer">
 <section id = "fadeImage"></section>
 <button id = "hideButton">Hide image</button>
 <button id = "showButton">Show image</button>
@@ -52,24 +83,35 @@
 <button id = "fadeToggleButton">Toggle fade</button>
 <button id = "fadeToButton">Fade to 50% and back</button>
 <button id = "widenButton">Widen Image</button>
-<button id = "narrowButton">Narrow Image</button>
+<button id = "narrowButton">Narrow Image</button>   
+</section>
 
-<br><br>
+
+<section class = "elementContainer">
 <button id = "getIPButton">Get IP of visitor</button>
-<p id = "outputIP">IP</p>
+<p id = "outputIP">IP</p>  
+</section>
 
+
+<section class = "elementContainer">
 <input type="number" placeholder = "First number" id = "firstNum">
 <input type="number" placeholder = "Second number" id = "secondNum">
 <button id = "sumButton" >Summarize</button>
 <p id = "outputSum">...</p>
+</section>
 
+<section class = "elementContainer">
 <section id = "drawingSection">
     <h2>Randomized Art</h2>
-<canvas id = "drawCanvas"></canvas><br>
+<canvas id = "drawCanvas"></canvas>
+<section id = "imageContainer">
+    <img src="" alt="" id = "userImage">
+</section>
+
 <section id = "drawingButtons">
 <button class = "drawButton" id = "drawLineButton">Draw random line</button>
 <button class = "drawButton" id = "drawBeizerButton">Draw random Bézier</button>
-<button class = "drawButton">Add image</button>
+<button class = "drawButton" id = "addImageButton">Add image</button>
 <button class = "drawButton">Save image</button>
 <button class = "drawButton" id = "drawTextButton">Draw text</button>
 <input class = "drawButton" type="checkbox" name = "transparentCheck" id = "transCheck">
@@ -80,7 +122,7 @@
 <button class = "drawButton" id = "clearCanvasButton">Clear canvas</button>
 </section>
 </section>
-
+</section>
 
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="script.js"></script>

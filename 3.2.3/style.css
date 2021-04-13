@@ -7,6 +7,16 @@ p{
     width: 350px;
 }
 
+.elementContainer{
+    border: 3px solid black;
+    padding: 20px;
+    border-radius: 15px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
 #mouseEventImg{
     width: 300px;
     height: 300px;
@@ -27,7 +37,7 @@ p{
 }
 
 body{
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -36,17 +46,20 @@ button{
     padding-bottom: 5px;
 }
 
-#drawingSection{
-    background-color: gainsboro;
-    width: 1000px;
-    height: 800px;
-}
-
 h2{
     position: relative;
     text-align: center;
     top: 50px;
 }
+
+#drawingSection{
+    position: relative;
+    background-color: gainsboro;
+    width: 1000px;
+    height: 850px;
+}
+
+
 
 #drawCanvas{
     width: 500px;
@@ -58,13 +71,23 @@ h2{
     top: 50px;
 }
 
+
+#imageContainer{
+    position: absolute;
+    right: 265px;
+    top: 120px;
+    background-color: red;
+    width: 175px;
+    height: 175px;
+}
+
 #drawingButtons{
-    background-color: aliceblue;
+    position: relative;
+    background-color:aliceblue;
     width: 500px;
     display: flex;
     flex-wrap: wrap;
-    position: relative;
-    top: 80px;
+    top: 75px;
     left: 250px;
     border: 5px solid orange;
     font-family: Arial, Helvetica, sans-serif;

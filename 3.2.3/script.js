@@ -59,6 +59,10 @@ window.onload = function() {
 
 };
 
+$(document).ready(function(){
+
+})
+
 function preloadImage(url){
     var img = new Image();
     img.src = url;
@@ -172,7 +176,7 @@ $("#canvasText").ready(function(){
     $("#drawTextButton").attr("disabled", true);
 })
 
-$("#canvasText").onkeyup(function(){
+$("#canvasText").keyup(function(){
     if(!$(this).val()){
         $("#drawTextButton").attr("disabled", true);
     }
